@@ -10,10 +10,10 @@
     </thead>
     
     <tbody>
-      @foreach($questions as $key => $question)
+      @foreach($answers as $key => $answer)
         <tr>
           <td>{{$key + 1}}</td>
-          <td>{{ $question->isi }}</td>
+          <td>{{ $answer->isi }}</td>
         </tr>
       @endforeach
     </tbody>

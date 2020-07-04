@@ -7,9 +7,9 @@ use App\Models\JawabanModel;
 
 class JawabanController extends Controller
 {
-    public function index() {
-        $answers = JawabanModel::get_all();
-        return view('items.index', compact('answers'));
+    public function show($id) {
+        $answers = JawabanModel::find_by_id($id);
+        return view('items.answers_index', compact('answers'));
     }
     
     public function store(Request $request) {

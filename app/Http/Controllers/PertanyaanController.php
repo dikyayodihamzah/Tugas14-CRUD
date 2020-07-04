@@ -9,7 +9,7 @@ class PertanyaanController extends Controller
 {
     public static function index() {
         $questions = PertanyaanModel::get_all();
-        return view('items.index', compact('questions'));
+        return view('items.questions_index', compact('questions'));
     }
 
     public function create() {
