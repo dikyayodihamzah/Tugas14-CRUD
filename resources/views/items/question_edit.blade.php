@@ -6,22 +6,23 @@
     
       {{-- header --}}
       <div class="card-header">
-        <h3 class="card-title">Pertanyaan Baru</h5>
+        <h3 class="card-title">Edit Pertanyaan</h5>
       </div>
 
       {{-- isi form --}}
-      <form action="/pertanyaan" method="POST" class="ml-4 mr-4">
+      <form action="/pertanyaan/{{$question->id}}" method="POST" class="ml-4 mr-4">
       @csrf
+      @method('PUT')
         <div class="card-body">
           <div class="form-group">
             <label for="judul">Judul:</label>
-            <input type="text" class="form-control" name="judul" placeholder="Masukkan judul" id="judul">
+            <input type="text" class="form-control" name="judul" value="{{$question->judul}}" id="judul">
           </div>
           <div class="form-group">
             <label for="isi">Isi:</label>
-            <input type="textarea" class="form-control" name="isi" placeholder="Masukkan isi" id="isi">
+            <input type="textarea" class="form-control" name="isi" value="{{$question->isi}}" id="isi">
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary">Perbarui</button>
         </div>
       </form>
     </div>
