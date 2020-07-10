@@ -34,3 +34,5 @@ class PertanyaanModel {
     return $deleted;
   }
 }
+
+?>

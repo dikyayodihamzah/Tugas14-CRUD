@@ -27,3 +27,6 @@ Route::delete('/pertanyaan/{id}', 'PertanyaanController@destroy');
 
 Route::get('/jawaban/{question_id}', 'JawabanController@show');
 Route::post('/jawaban/{question_id}', 'JawabanController@store');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
